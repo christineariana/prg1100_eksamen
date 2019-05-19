@@ -11,11 +11,7 @@ session_start();
     else {
         include("start_admin.html");
 
-
-
 ?>
-
-
 
 <div class="kontaktskjema">
 
