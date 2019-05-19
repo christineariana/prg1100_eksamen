@@ -1,0 +1,87 @@
+body {
+    background: #fff;
+    color: #545454;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px auto;
+    max-width: 80%;
+    padding: 10px;
+    margin-bottom: 60px;
+
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  
+input {
+
+    width: 20em;
+}
+
+header {
+
+    max-width: 100%;
+    margin-top: 0.7vw;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav {
+
+    float:left;
+    margin-left: 3vw;
+    margin-right:3vw;
+    margin-bottom: 9vw;
+
+}
+
+
+.kontaktskjema {
+
+    float:left;
+    margin-right:3vw;
+    margin-left: 3vw;
+    margin-top: 3vw;
+    max-width: 600px;
+
+}
+
+.innlogging {
+
+    margin-top:3vw;
+    text-align: center;
+    max-width: 100%;
+
+}
+
+footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background-color: #545454;
+    color: white;
+    text-align: center;
+    font-size: 70%;
+    margin-top: 60px;
+    
+}
+
+a {
+    color: #545454;
+    text-decoration: none;
+}
+
+a:hover {
+   color: grey;
+    text-decoration: underline;
+}
+
+.palogging {
+
+    text-align: center;
+
+}
