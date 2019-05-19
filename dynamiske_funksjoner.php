@@ -45,7 +45,9 @@ function listeboksOrdre (){
     
         else {
             
-            $sqlSetning="SELECT * FROM `bestilling`ORDER BY `ordrenummer`;";
+            $brukernavn=$_SESSION["brukernavn"];
+
+            $sqlSetning="SELECT * FROM `bestilling` WHERE brukernavn='$brukernavn' ORDER BY `ordrenummer`;";
             $sqlResultat=mysqli_query($database,$sqlSetning) or die ("ikke mulig å hente data fra databasen");  
             $antallRader=mysqli_num_rows($sqlResultat); 
 
@@ -54,10 +56,10 @@ function listeboksOrdre (){
         $rad=mysqli_fetch_array($sqlResultat); 
         $ordrenummer=$rad["ordrenummer"];   
         $hotellnavn=$rad["hotellnavn"];  
-        $romnummer=$rad["romnummer"];    
+        $romtype=$rad["romtype"];    
         $fra_dato=$rad["fra_dato"]; 
         $til_dato=$rad["til_dato"]; 
-        $brukernavn=$rad["brukernavn"]; 
+        $brukernavns=$rad["brukernavn"]; 
 
         print("<option value='$ordrenummer'>$ordrenummer</option>");}
 
