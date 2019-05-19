@@ -1,6 +1,6 @@
 <?php  
     
-    include("start_hoved.html");
+    include("start_minside.html");
 
 ?>
 
@@ -71,14 +71,14 @@ if (isset($_POST ["bookHotell"])){
         
     else { 
         
-        $sqlSetning="SELECT rom.hotellnavn, rom.romtype FROM rom left join bestilling on bestilling.romtype = rom.romtype
+        $sqlSetning="SELECT rom.hotellnavn, rom.romtype, rom.romnummer FROM rom left join bestilling on bestilling.romnummer = rom.romnummer
         WHERE ('$ankomst' < bestilling.til_dato and rom.romtype like '$romtype') or ('$avreise' > bestilling.fra_dato and rom.romtype like '$romtype')
         ORDER BY rom.romnummer;";
         $sqlResultat=mysqli_query($database,$sqlSetning) or die ("ikke mulig å hente data fra databasen");
         
     if (mysqli_num_rows($sqlResultat)!=0){
         
-        print ("Vi har ledig rom i denne perioden! <a href='01_registrere_minside.php'>Registrer deg for å booke rom i dag!</a> ");
+        print ("Vi har ledig rom i denne perioden! </br> <a href='01_registrere_minside.php'>Registrer deg for å booke rom i dag!</a> ");
     
     } else {
 
